@@ -4,15 +4,13 @@ class Producto {
     private $id;
     private $nombre;
     private $precio;
-    private $categoria;
     private $stock;
 
     // Constructor de la clase
-    public function __construct($nombre, $precio, $categoria, $stock) {
+    public function __construct($nombre, $precio, $stock) {
         $this->id = null; // Se inicializa en null para que se genere automáticamente al agregar un nuevo producto
         $this->nombre = $nombre;
         $this->precio = $precio;
-        $this->categoria = $categoria;
         $this->stock = $stock;
     }
 
@@ -29,9 +27,6 @@ class Producto {
         return $this->precio;
     }
 
-    public function getCategoria() {
-        return $this->categoria;
-    }
 
     public function getStock() {
         return $this->stock;
@@ -43,10 +38,6 @@ class Producto {
 
     public function setPrecio($precio) {
         $this->precio = $precio;
-    }
-
-    public function setCategoria($categoria) {
-        $this->categoria = $categoria;
     }
 
     public function setStock($stock) {
